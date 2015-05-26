@@ -1,3 +1,4 @@
+@import url("http://fonts.googleapis.com/css?family=Roboto&subset=cyrillic-ext,latin");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
 
 body, html { height: 100%; }
@@ -20,9 +21,48 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+@font-face { font-family: GillSans-Light; src: url("fonts/GillSans-Light.eot"); src: url("fonts/GillSans-Light.eot?#iefix") format("embedded-opentype"), url("fonts/GillSans-Light.woff") format("woff"), url("fonts/GillSans-Light.woff") format("woff"), url("fonts/GillSans-Light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+body { color: #444444; font-size: 12px; line-height: 1.4; font-family: "Roboto", sans-serif; font-weight: normal; background: url(../img/bg.png) repeat; }
+body a { text-decoration: none; }
+body a:hover { text-decoration: underline; }
+
+.out { margin: 0 auto; width: 1024px; }
+
+.header { position: relative; margin-bottom: 14px; padding: 12px 20px 16px; background: url(../img/header-bg.png); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; *zoom: 1; }
+.header:after { content: " "; display: table; clear: both; }
+.header:before { position: absolute; left: 0; right: 0; top: 100%; content: ""; height: 4px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; background-color: #626262; }
+.header .user, .header .logout { vertical-align: top; display: inline-block; }
+
+.logo { position: absolute; top: 50%; left: 15px; -moz-transform: translate(0, -50%); -ms-transform: translate(0, -50%); -webkit-transform: translate(0, -50%); transform: translate(0, -50%); background: url('../img/icons-s187d51cf61.png') 0 -30px no-repeat; width: 170px; height: 67px; }
+
+.authoriz { float: right; }
+
+.user { padding: 9px 9px 0 0; height: 55px; border-right: 1px dotted #777777; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; *zoom: 1; }
+.user:after { content: " "; display: table; clear: both; }
+.user .user__left { padding-right: 9px; overflow: hidden; }
+.user .user__text { color: #777777; color: #777777; text-align: right; line-height: 21px; font-size: 18px; font-family: "GillSans-Light", Arial, sans-serif; font-weight: normal; }
+.user .user__name { color: #999999; font-size: 14px; }
+.user .user__img { position: relative; float: right; width: 41px; height: 41px; overflow: hidden; background-color: #999999; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; }
+.user .user__img:hover + .user__left a { text-decoration: underline; }
+.user .user__img img { position: absolute; top: 50%; left: 50%; -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+
+.logout { padding: 15px 0 0 15px; font-size: 18px; font-family: "GillSans-Light", Arial, sans-serif; font-weight: normal; }
+.logout a { color: white; }
+
+.item { margin-top: 20px; }
+.item:first-child { margin-top: 0; }
+
+.topic { padding-bottom: 2px; color: #777777; font-size: 18px; border-bottom: 1px dotted #777777; font-family: "GillSans-Light", Arial, sans-serif; font-weight: normal; *zoom: 1; }
+.topic:after { content: " "; display: table; clear: both; }
+.topic .filter { float: left; }
+.topic .status { float: right; }
+
+.status { font-size: 0; }
+.status .status__item { margin-left: 12px; padding-left: 12px; font-size: 18px; line-height: 18px; border-left: 1px solid #777777; display: inline-block; }
+.status .status__item:first-child { padding: 0; margin: 0; border: none; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
-.l .l-col1 { float: left; width: 20%; }
-.l .l-col2 { float: right; width: 70%; }
+.l .l-col1 { float: left; padding: 15px 12px 15px 7px; width: 290px; -moz-border-radius: 0 4px 4px 0; -webkit-border-radius: 0; border-radius: 0 4px 4px 0; }
+.l .l-col2 { float: right; padding: 15px 7px; width: 716px; -moz-border-radius: 4px 0 0 4px; -webkit-border-radius: 4px; border-radius: 4px 0 0 4px; }
+.l .l-col1, .l .l-col2 { background-color: white; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }

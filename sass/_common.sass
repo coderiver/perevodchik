@@ -47,19 +47,140 @@
 // p
 // 	+jpg(bla)
 
+@import url("http://fonts.googleapis.com/css?family=Roboto&subset=cyrillic-ext,latin")
+=rob
+	font-family: 'Roboto', sans-serif
+	font-weight: normal
+
++font(GillSans-Light, GillSans-Light)
+=gsl
+	font-family: "GillSans-Light", Arial, sans-serif
+	font-weight: normal
+
+$light-gray: #777
+$gray: #444
 
 body
-	font-family: Arial, sans-serif 
+	color: $gray
 	font-size: 12px 
 	line-height: 1.4
+	+rob
+	background: url(../img/bg.png) repeat
+	a
+		text-decoration: none
+		&:hover
+			text-decoration: underline
 
+// common blocks
 
-// common blocks      
+.out
+	margin: 0 auto
+	width: 1024px
 
+.header
+	position: relative
+	margin-bottom: 14px
+	padding: 12px 20px 16px
+	background: url(../img/header-bg.png)
+	+cover
+	+clr
+	&:before
+		position: absolute
+		left: 0
+		right: 0
+		top: 100%
+		content: ''
+		height: 4px
+		+opacity(0.5)
+		background-color: #626262
+	.user,
+	.logout
+		vertical-align: top
+		display: inline-block
 
+.logo
+	position: absolute
+	top: 50%
+	left: 15px
+	+translate(0,-50%)
+	+s(logo)
 
+.authoriz
+	float: right
 
+.user
+	padding: 9px 9px 0 0
+	height: 55px
+	border-right: 1px dotted $light-gray
+	+box
+	+clr
+	.user__left
+		padding-right: 9px
+		overflow: hidden
+	.user__text
+		color: #777
+		color: $light-gray
+		text-align: right
+		line-height: 21px
+		font-size: 18px
+		+gsl
+	.user__name
+		color: #999
+		font-size: 14px
+	.user__img
+		position: relative
+		float: right
+		width: 41px
+		height: 41px
+		overflow: hidden
+		background-color: #999
+		+border-radius(6px)
+		&:hover
+			& + .user__left a
+				text-decoration: underline
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			+translate(-50%,-50%)
 
+.logout
+	padding: 15px 0 0 15px
+	font-size: 18px
+	+gsl
+	a
+		color: #fff
+
+.item
+	margin-top: 20px
+	&:first-child
+		margin-top: 0
+
+.topic
+	padding-bottom: 2px
+	color: $light-gray
+	font-size: 18px
+	border-bottom: 1px dotted $light-gray
+	+gsl
+	+clr
+	.filter
+		float: left
+	.status
+		float: right
+
+.status
+	font-size: 0
+	.status__item
+		margin-left: 12px
+		padding-left: 12px
+		font-size: 18px
+		line-height: 18px
+		border-left: 1px solid $light-gray
+		display: inline-block
+		&:first-child
+			padding: 0
+			margin: 0
+			border: none
 
 
 
