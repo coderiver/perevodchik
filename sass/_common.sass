@@ -57,15 +57,30 @@
 	font-family: "GillSans-Light", Arial, sans-serif
 	font-weight: normal
 
++font(MyriadPro-Regular, MyriadPro-Regular)
+=mp
+	font-family: "MyriadPro-Regular", Arial, sans-serif
+	font-weight: normal
+
 $light-gray: #777
 $gray: #444
 
 body
+	position: relative
 	color: $gray
 	font-size: 12px 
 	line-height: 1.4
-	+rob
-	background: url(../img/bg.png) repeat
+	+mp
+	
+	&:before
+		position: fixed
+		content: ''
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		opacity: .8
+		background: url(../img/bg.png) repeat 1px 0
 	a
 		text-decoration: none
 		&:hover
@@ -73,14 +88,27 @@ body
 
 // common blocks
 
+// out
 .out
+	position: relative
 	margin: 0 auto
+	padding-bottom: 48px
 	width: 1024px
+	height: auto
+	min-height: 100%
+	+box
+	&.is-full
+		height: 100%
+		min-height: 540px
+		.l-col2
+			height: 100%
 
+// header
 .header
 	position: relative
 	margin-bottom: 14px
 	padding: 12px 20px 16px
+	z-index: 2
 	background: url(../img/header-bg.png)
 	+cover
 	+clr
@@ -98,6 +126,7 @@ body
 		vertical-align: top
 		display: inline-block
 
+// logo
 .logo
 	position: absolute
 	top: 50%
@@ -105,12 +134,15 @@ body
 	+translate(0,-50%)
 	+s(logo)
 
+// authoriz
 .authoriz
 	float: right
 
+// user
 .user
 	padding: 9px 9px 0 0
 	height: 55px
+	min-width: 137px
 	border-right: 1px dotted $light-gray
 	+box
 	+clr
@@ -144,6 +176,7 @@ body
 			left: 50%
 			+translate(-50%,-50%)
 
+// logout
 .logout
 	padding: 15px 0 0 15px
 	font-size: 18px
@@ -151,13 +184,19 @@ body
 	a
 		color: #fff
 
+// item
 .item
-	margin-top: 20px
-	&:first-child
-		margin-top: 0
+	color: #999
+	.item__wrap
+		padding: 18px 18px 15px 10px
+	.item__in
+		padding-bottom: 8px
+		margin-bottom: 14px
+		border-bottom: 1px dotted $light-gray
 
+// topic
 .topic
-	padding-bottom: 2px
+	padding: 7px 0 0 2px
 	color: $light-gray
 	font-size: 18px
 	border-bottom: 1px dotted $light-gray
@@ -166,8 +205,27 @@ body
 	.filter
 		float: left
 	.status
+		margin-top: 5px
 		float: right
 
+// filter
+.filter
+	position: relative
+	padding-left: 16px
+	cursor: pointer
+	+user-select(none)
+	&.is-active
+		&:before
+			position: absolute
+			+rotate(180)
+	&:before
+		position: absolute
+		content: ''
+		top: 8px
+		left: 0
+		+arr(10,5,#ea5100,b)
+
+// status
 .status
 	font-size: 0
 	.status__item
@@ -182,20 +240,356 @@ body
 			margin: 0
 			border: none
 
+// colors
+.is-orange
+	color: #f60
+.is-green
+	color: #090
 
+// nav
+.nav
+	position: relative
+	margin: 2px -28px 0 0
+	&:before
+		position: absolute
+		content: ''
+		top: -42px
+		left: -7px
+		right: 12px
+		bottom: 32px
+		z-index: -1
+		background: #fff
+		+border-radius(0 4px 0 0)
+	&:after
+		position: absolute
+		content: ''
+		left: -7px
+		right: 12px
+		top: 100%
+		bottom: -2000px
+		margin-top: -4px
+		background: #fff
+	.nav__item
+		padding: 4px 0
+		overflow: hidden
+		display: block
+		&.is-greate
+			position: relative
+			margin-left: -7px
+			padding-left: 7px
+			&:before
+				position: absolute
+				content: ''
+				left: -7px
+				top: 0
+				bottom: 0
+				right: 22px
+				background: #fff
+			a
+				margin-right: 22px
+				&:before
+					position: absolute
+					content: ''
+					top: 0
+					right: -10px
+					display: block
+					+arr(10,14,#fff,tl)
+				&:after
+					position: absolute
+					content: ''
+					top: auto
+					right: -10px
+					bottom: -7px
+					display: block
+					+arr(14,10,#fff,bl)
+				span
+					position: absolute
+					top: 0
+					left: 0
+					right: 6px
+					bottom: 0
+					padding: 7px 12px
+					background: #ececec
+					display: block
+					&:before
+						position: absolute
+						content: ''
+						top: 0
+						right: -8px
+						z-index: 2
+						+arr(8,14,#ececec,tl)
+					&:after
+						position: absolute
+						content: ''
+						bottom: 0
+						right: -8px
+						z-index: 2
+						+arr(14,8,#ececec,bl)
+	a
+		position: relative
+		margin-right: 13px
+		padding: 7px 12px
+		height: 28px
+		color: $gray
+		display: block
+		+box
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			right: -7px
+			z-index: 1
+			+arr(7,28,$gray,r)
+			display: none
+		&:after
+			position: absolute
+			content: ''
+			top: 50%
+			right: -12px
+			+translate(0,-50%)
+			+arr(12,44,#fff,r)
+			display: none
+		&.is-active
+			color: #fff
+			text-transform: uppercase
+			background: $gray
+			&:before,
+			&:after
+				display: block
+			&:hover
+				text-decoration: none
 
+// table
+.table
+	margin-top: 2px
+	color: $gray
+	td,th
+		text-align: center
+		+box
+		&:first-child
+			padding-left: 5px
+			text-align: left
+		&:last-child
+			width: 68px
+		&.text-left
+			text-align: left
+		&.is-uppercase
+			text-transform: uppercase
+	th
+		height: 15px
+		line-height: 15px
+		color: #666
+		font-size: 11px
+	td
+		height: 28px
+		line-height: 28px
+	.select
+		width: 68px
 
+// select
+.select
+	position: relative
+	width: 100%
+	font-size: 12px
+	text-align: left
+	cursor: pointer
+	border: 1px solid #ccc
+	+border-radius(5px)
+	+box
+	&.is-active
+		+border-radius(5px 5px 0 0)
+	select
+		position: absolute
+		z-index: -1
+		opacity: 0
+	.select__text
+		position: relative
+		padding: 0 11px 0 5px
+		display: block
+		height: 20px
+		line-height: 20px
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		+user-select(none)
+		&:before
+			position: absolute
+			content: ''
+			top: 2px
+			right: 4px
+			width: 16px
+			height: 16px
+			z-index: 2
+			background-color: #cdcdcd
+			+border-radius(5px)
+		&:after
+			content: ""
+			position: absolute
+			right: 8px
+			top: 50%
+			margin-top: -2px
+			z-index: 3
+			+arr(8,4,#fff,b)
+	.select__list
+		position: absolute
+		display: none
+		left: -1px
+		right: -1px
+		top: 100%
+		z-index: 100
+		border: 1px solid #ccc
+		max-height: 200px
+		overflow-x: hidden
+		overflow-y: auto
+		+border-radius(0 0 5px 5px)
+		background: #fff
+		li
+			padding: 5px 11px 
+			cursor: pointer
+			line-height: 1
+			&:hover
+				background: #ea5100
+				color: #fff 
 
+// input, textarea
+.input
+	height: 22px
 
+.input,
+.textarea
+	padding: 0 5px
+	width: 100%
+	border: 1px solid #ccc
+	+border-radius(5px)
+	+box
 
+.textarea
+	padding-top: 3px
+	resize: none
+	height: 51px
+	&.textarea_h92
+		height: 92px
 
+// checkbox
+.checkbox
+	position: relative
+	display: block
+	cursor: pointer
+	+user-select(none)
+	&.checkbox_t20
+		margin-top: 20px
+	span
+		position: relative
+		padding-left: 20px
+		&:before
+			content: ''
+			border: 1px solid #a4a4a4
+			+border-radius(4px)
+		&:after
+			position: absolute
+			content: ''
+			top: 2px
+			left: 4px
+			width: 7px
+			height: 7px
+			background: #999
+			display: none
+	input,
+	span:before
+		position: absolute
+		top: -2px
+		left: 0
+		width: 15px
+		height: 15px
+		+box
+	input
+		+opacity(0)
+		z-index: 2
+		&:checked + span:after
+			display: block
 
+// attach
+.attach
+	position: relative
+	padding-top: 28px
+	width: 100%
+	height: 81px
+	text-align: center
+	background: rgba(#ccc, .2)
+	+border-radius(5px)
+	+box
+	input
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		width: 100%
+		z-index: 2
+		cursor: pointer
+		+opacity(0)
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+	.attach__text
+		text-transform: uppercase
+	.attach__text-small
+		text-transform: lowercase
 
+// title
+.title
+	color: #777
+	font-size: 18px
+	+gsl
 
+// row
+.row
+	margin-top: 8px
+	+clr
 
+// field
+.field
+	margin: 14px 0 6px
 
+// col
+.col
+	margin-left: 10px
+	vertical-align: top
+	display: inline-block
+	&:first-child
+		margin-left: 0
 
+// btn
+.btn
+	padding: 0 20px
+	min-width: 221px
+	height: 22px
+	color: #fff
+	line-height: 21px
+	font-size: 14px
+	text-transform: uppercase
+	background-color: #ea5100
+	+border-radius(4px)
+	+transition(background, .1s linear)
+	+mp
+	+box
+	&:hover
+		background: darken(#ea5100, 5)
+// button.btn
+// 	line-height: 1
 
+// width
+.w278
+	width: 278px
+.w569
+	width: 569px
+.w152
+	width: 152px
+.w239
+	width: 239px
 
 
 

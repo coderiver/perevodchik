@@ -1,17 +1,43 @@
 // default layout
 .l
+	position: relative
+	margin-top: -97px
+	padding-top: 97px
+	height: 100%
+	z-index: 1
+	+box
 	+clr
 	.l-col1
-		float: left
-		padding: 15px 12px 15px 7px
-		width: 290px
-		+border-radius(0 4px 4px 0)
+		position: absolute
+		top: 97px
+		left: 0
+		bottom: 0
+		width: 302px
+		+border-radius(0 4px 0 0)
+		+box
+		&:before
+			position: absolute
+			content: ''
+			left: 0
+			bottom: 0
+			right: 12px
+			height: 4px
+			+border-radius(0 0 4px 0)
+			background: #fff
+		.wrap
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 4px
+			padding: 7px 28px 15px 7px
+			overflow: hidden
 	.l-col2
+		position: relative
 		float: right
-		padding: 15px 7px
+		padding: 7px 7px 18px
 		width: 716px
+		height: 100%
 		+border-radius(4px 0 0 4px)
-	.l-col1,
-	.l-col2
 		background-color: #fff
 		+box
