@@ -188,11 +188,15 @@ body
 .item
 	color: #999
 	.item__wrap
-		padding: 18px 18px 15px 10px
+		margin-top: 18px
+		padding: 0 18px 15px 10px
 	.item__in
 		padding-bottom: 8px
 		margin-bottom: 14px
 		border-bottom: 1px dotted $light-gray
+		&.item__in_mod
+			margin-bottom: 0
+			border-bottom: none
 
 // topic
 .topic
@@ -240,11 +244,27 @@ body
 			margin: 0
 			border: none
 
-// colors
+// modifiers
 .is-orange
 	color: #f60
+
 .is-green
 	color: #090
+
+.is-darken
+	color: #777
+
+.is-center
+	text-align: center
+	.input
+		text-align: center
+	.label
+		text-align: left
+
+.is-right
+	text-align: right
+	.label
+		text-align: left
 
 // nav
 .nav
@@ -256,7 +276,7 @@ body
 		top: -42px
 		left: -7px
 		right: 12px
-		bottom: 32px
+		bottom: 28px
 		z-index: -1
 		background: #fff
 		+border-radius(0 4px 0 0)
@@ -267,11 +287,10 @@ body
 		right: 12px
 		top: 100%
 		bottom: -2000px
-		margin-top: -4px
 		background: #fff
-	.nav__item
-		padding: 4px 0
+	li
 		overflow: hidden
+	.nav__item
 		display: block
 		&.is-greate
 			position: relative
@@ -287,6 +306,9 @@ body
 				background: #fff
 			a
 				margin-right: 22px
+				&:hover
+					span
+						text-decoration: underline
 				&:before
 					position: absolute
 					content: ''
@@ -325,6 +347,11 @@ body
 						right: -8px
 						z-index: 2
 						+arr(14,8,#ececec,bl)
+		a.is-active
+			text-transform: initial
+		li
+			a
+				padding-left: 35px
 	a
 		position: relative
 		margin-right: 13px
@@ -350,6 +377,8 @@ body
 			+arr(12,44,#fff,r)
 			display: none
 		&.is-active
+			margin-top: 4px
+			margin-bottom: 4px
 			color: #fff
 			text-transform: uppercase
 			background: $gray
@@ -363,18 +392,24 @@ body
 .table
 	margin-top: 2px
 	color: $gray
+	&.table_mod
+		td,th
+			text-align: left
 	td,th
 		text-align: center
 		+box
 		&:first-child
 			padding-left: 5px
 			text-align: left
+			width: 127px
 		&:last-child
 			width: 68px
 		&.text-left
 			text-align: left
 		&.is-uppercase
 			text-transform: uppercase
+		&.is-center
+			text-align: center
 	th
 		height: 15px
 		line-height: 15px
@@ -385,6 +420,8 @@ body
 		line-height: 28px
 	.select
 		width: 68px
+	.w49
+		width: 49px
 
 // select
 .select
@@ -398,6 +435,17 @@ body
 	+box
 	&.is-active
 		+border-radius(5px 5px 0 0)
+	&.select_small
+		.select__text
+			text-align: center
+			height: 14px
+			line-height: 16px
+			border-color: #9a9a9a
+			&:before
+				display: none
+			&:after
+				right: 4px
+				+arr(8,4,#9a9a9a,b)
 	select
 		position: absolute
 		z-index: -1
@@ -454,11 +502,16 @@ body
 // input, textarea
 .input
 	height: 22px
+	+placeholder-color(#444)
+	&:focus
+		+placeholder
+			font-size: 0
 
 .input,
 .textarea
-	padding: 0 5px
+	padding: 0 5px 2px
 	width: 100%
+	color: #777
 	border: 1px solid #ccc
 	+border-radius(5px)
 	+box
@@ -476,8 +529,13 @@ body
 	display: block
 	cursor: pointer
 	+user-select(none)
-	&.checkbox_t20
-		margin-top: 20px
+	&.is-uppercase
+		margin-top: 16px
+	&.is-dark
+		span
+			&:before
+				border-color: #666
+				background: #666
 	span
 		position: relative
 		padding-left: 20px
@@ -534,6 +592,9 @@ body
 			left: 0
 			right: 0
 			bottom: 0
+	&.attach_h91
+		padding-top: 38px
+		height: 91px
 	.attach__text
 		text-transform: uppercase
 	.attach__text-small
@@ -544,11 +605,18 @@ body
 	color: #777
 	font-size: 18px
 	+gsl
+a.title
+	display: block
 
 // row
 .row
 	margin-top: 8px
+	line-height: 22px
 	+clr
+	* 
+		line-height: 1.4
+	span
+		line-height: 22px
 
 // field
 .field
@@ -561,6 +629,24 @@ body
 	display: inline-block
 	&:first-child
 		margin-left: 0
+	&.w82,
+	&.w125
+		margin-left: 4px
+
+// calculator
+.calculator
+	text-align: right
+	.col
+		margin-left: 0
+
+// possible-dates
+.possible-dates
+	.col
+		margin-left: 48px
+		&:first-child
+			margin-left: 7px
+	.checkbox
+		margin-top: 20px
 
 // btn
 .btn
@@ -578,20 +664,63 @@ body
 	+box
 	&:hover
 		background: darken(#ea5100, 5)
+	&.btn_blue
+		background: #0099cc
+		&:hover
+			background: darken(#0099cc, 5)
+
 // button.btn
 // 	line-height: 1
 
+// search
+.search
+	margin-bottom: 4px
+	.input
+		display: block
+
+// sortby
+.sortby
+	float: right
+	.col
+		width: 96px
+	.select
+		font-size: 18px
+		.select__text
+			line-height: 23px
+
 // width
-.w278
-	width: 278px
-.w569
-	width: 569px
+.w49
+	width: 49px
+.w76
+	width: 76px
+.w82
+	width: 82px
+.w85
+	width: 85px
+.w125
+	width: 125px
 .w152
 	width: 152px
 .w239
 	width: 239px
+.w278
+	width: 278px
+.w318
+	width: 318px
+.w569
+	width: 569px
+.w50p
+	width: 49%
 
-
+// padding
+.pl5
+	padding-left: 5px
+.pl15
+	padding-left: 13px
+.pl20
+	padding-left: 20px
+.pl35
+	padding-left: 35px
 
 
 
