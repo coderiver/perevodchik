@@ -47,11 +47,6 @@
 // p
 // 	+jpg(bla)
 
-@import url("http://fonts.googleapis.com/css?family=Roboto&subset=cyrillic-ext,latin")
-=rob
-	font-family: 'Roboto', sans-serif
-	font-weight: normal
-
 +font(GillSans-Light, GillSans-Light)
 =gsl
 	font-family: "GillSans-Light", Arial, sans-serif
@@ -101,7 +96,8 @@ body
 		height: 100%
 		min-height: 540px
 		.l-col2
-			height: 100%
+			height: auto
+			min-height: 100%
 
 // header
 .header
@@ -187,16 +183,44 @@ body
 // item
 .item
 	color: #999
+	&.is-hide
+		.filter
+			&:before
+				position: absolute
+				+rotate(-90)
+		.table
+			display: none
+		.item__arr
+			display: block
 	.item__wrap
 		margin-top: 18px
 		padding: 0 18px 15px 10px
 	.item__in
-		padding-bottom: 8px
+		position: relative
+		padding-bottom: 9px
 		margin-bottom: 14px
 		border-bottom: 1px dotted $light-gray
 		&.item__in_mod
 			margin-bottom: 0
 			border-bottom: none
+	.item__arr
+		position: absolute
+		top: 2px
+		left: 50%
+		margin-left: -20px
+		+arr(9,5,#ea5100,b)
+		+translate(-50%,0)
+		display: none
+		&:before,
+		&:after
+			position: absolute
+			content: ''
+			top: -5px
+			+arr(9,5,#ea5100,b)
+		&:before
+			left: -21px
+		&:after
+			right: -21px
 
 // topic
 .topic
@@ -218,10 +242,6 @@ body
 	padding-left: 16px
 	cursor: pointer
 	+user-select(none)
-	&.is-active
-		&:before
-			position: absolute
-			+rotate(180)
 	&:before
 		position: absolute
 		content: ''
@@ -269,14 +289,14 @@ body
 // nav
 .nav
 	position: relative
-	margin: 2px -28px 0 0
+	margin: 2px -28px 0 -7px
 	&:before
 		position: absolute
 		content: ''
 		top: -42px
 		left: -7px
 		right: 12px
-		bottom: 28px
+		bottom: 100%
 		z-index: -1
 		background: #fff
 		+border-radius(0 4px 0 0)
@@ -291,11 +311,21 @@ body
 	li
 		overflow: hidden
 	.nav__item
+		position: relative
+		padding-left: 7px
 		display: block
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			left: 0
+			right: 12px
+			bottom: 0
+			background: #fff
 		&.is-greate
 			position: relative
 			margin-left: -7px
-			padding-left: 7px
+			padding: 0 0 2px 7px
 			&:before
 				position: absolute
 				content: ''
@@ -303,6 +333,14 @@ body
 				top: 0
 				bottom: 0
 				right: 22px
+				background: #fff
+			&:after
+				position: absolute
+				content: ''
+				left: 0
+				bottom: 0
+				right: 12px
+				height: 2px
 				background: #fff
 			a
 				margin-right: 22px
@@ -327,7 +365,7 @@ body
 				span
 					position: absolute
 					top: 0
-					left: 0
+					left: 7px
 					right: 6px
 					bottom: 0
 					padding: 7px 12px
@@ -347,11 +385,11 @@ body
 						right: -8px
 						z-index: 2
 						+arr(14,8,#ececec,bl)
-		a.is-active
-			text-transform: initial
 		li
 			a
 				padding-left: 35px
+				&.is-active
+					text-transform: initial
 	a
 		position: relative
 		margin-right: 13px
@@ -395,11 +433,28 @@ body
 	&.table_mod
 		td,th
 			text-align: left
+	tr
+		cursor: pointer
+		&.is-orange
+			td:first-child
+				&:before
+					+arr(5,10,#ff6600,r)
+		&.is-green
+			td:first-child
+				&:before
+					+arr(5,10,#009900,r)
+		&:hover,
+		&.is-active
+			td
+				font-weight: bold
+				+text-shadow(0px 0px 0px #444)
+				&:before
+					display: block
 	td,th
 		text-align: center
 		+box
 		&:first-child
-			padding-left: 5px
+			padding-left: 7px
 			text-align: left
 			width: 127px
 		&:last-child
@@ -418,6 +473,16 @@ body
 	td
 		height: 28px
 		line-height: 28px
+		&:first-child
+			position: relative
+			&:before
+				position: absolute
+				content: ''
+				top: 50%
+				left: 0
+				margin-top: -8px
+				+arr(5,10,#444,r)
+				display: none
 	.select
 		width: 68px
 	.w49
@@ -688,6 +753,162 @@ a.title
 		.select__text
 			line-height: 23px
 
+// details
+.details
+	a
+		color: #ff6600
+		text-transform: uppercase
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+	.details__field
+		margin-top: 20px
+	.details__row
+		margin-top: 3px
+		+clr
+	.details__left
+		float: left
+		width: 112px
+		color: #666
+	.details__right
+		color: #444
+		font-weight: bold
+		overflow: hidden
+	.details__link
+		margin-left: 5px
+
+.translator
+	position: relative
+	width: 100%
+	font-size: 12px
+	text-align: left
+	cursor: pointer
+	border: 1px solid #ccc
+	+border-radius(5px)
+	+box
+	&.is-visible
+		.translator__block
+			display: block
+	.translator__text
+		position: relative
+		padding: 0 11px 0 5px
+		display: block
+		height: 20px
+		line-height: 20px
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		+user-select(none)
+		&:before
+			position: absolute
+			content: ''
+			top: 2px
+			right: 4px
+			width: 16px
+			height: 16px
+			z-index: 2
+			background-color: #cdcdcd
+			+border-radius(5px)
+		&:after
+			content: ""
+			position: absolute
+			right: 8px
+			top: 50%
+			margin-top: -2px
+			z-index: 3
+			+arr(8,4,#fff,b)
+	.translator__block
+		position: absolute
+		display: none
+		left: -9px
+		top: 100%
+		margin-top: 12px
+		padding: 4px 0 8px
+		min-width: 290px
+		z-index: 99
+		border: 1px solid #ccc
+		+border-radius(5px)
+		background: #fff
+		display: none
+		+box
+		&:before
+			position: absolute
+			content: ''
+			top: -8px
+			left: 27px
+			+s(tr-arr)
+	.translator__row
+		margin-top: 5px
+		padding-left: 8px
+		font-size: 0
+		+box
+		&:hover
+			color: #fff
+			background: #ea5100
+		&:first-child
+			margin-top: 0
+			&:hover
+				color: #999999
+				background: #fff
+	.translator__title,
+	.translator__col
+		padding-right: 4px
+		white-space: nowrap
+		font-size: 12px
+		overflow: hidden
+		text-overflow: ellipsis
+		display: inline-block
+		+box
+		&:first-child
+			width: 90px
+		&:nth-child(2)
+			width: 120px
+			text-align: center
+		&:last-child
+			width: 70px
+
+// popup
+.popup
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 100
+	overflow: auto
+	text-align: center
+	display: none
+	+vertical
+	&.is-active
+		display: block
+	.popup__in
+		position: relative
+		padding: 19px
+		width: 744px
+		font-size: 12px
+		text-align: left
+		min-height: 502px
+		vertical-align: middle
+		border: 2px solid #9a9a9a
+		+border-radius(8px)
+		+box-shadow(0 2px 0 4px rgba(#9a9a9a, .5))
+		background: #fff
+		display: inline-block
+		+box
+	.popup__close
+		position: absolute
+		top: 33px
+		right: 18px
+		color: #F60
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+	.topic
+		padding-bottom: 6px
+		margin-bottom: 10px
+	.details__field
+		&:first-child
+			margin-top: 0
 // width
 .w49
 	width: 49px
@@ -701,6 +922,10 @@ a.title
 	width: 125px
 .w152
 	width: 152px
+.w190
+	width: 190px
+.w235
+	width: 235px
 .w239
 	width: 239px
 .w278

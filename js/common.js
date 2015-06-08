@@ -8,12 +8,14 @@ head.ready(function() {
 
 	// filter
 	$('.js-filter').on('click', function() {
-		if ($(this).hasClass('is-active')) {
-			$(this).removeClass('is-active');
+		var btn = $(this).parents('.js-item');
+		if (btn.hasClass('is-hide')) {
+			btn.removeClass('is-hide');
 		}
 		else {
-			$(this).addClass('is-active');
+			btn.addClass('is-hide');
 		}
+		wHeight();
 	});
 
 	// select

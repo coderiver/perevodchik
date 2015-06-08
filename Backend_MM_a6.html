@@ -36,16 +36,23 @@
 		<!-- l-col1 -->
 		<div class="l-col1">
 			<div class="wrap">
-				<h3 class="topic">My Dashboard</h3>
+				<div class="topic">
+				My Dashboard
+				<!-- serch -->
+				<form class="search">
+					<input type="text" class="input" placeholder="Find Client Folder">
+				</form>
+				</div>
 				<!-- nav -->
 				<div class="nav">
-					<li class="nav__item"><a class="is-active" href="#">PROJECTS/REQUESTS</a></li>
+					<li class="nav__item"><a href="#">PROJECTS/REQUESTS</a></li>
 					<li class="nav__item"><a href="#">File Storage</a></li>
 					<li class="nav__item"><a href="#">Finances/Discounts</a></li>
-					<li class="nav__item"><a href="#">Clients Management</a></li>
+					<li class="nav__item"><a class="is-active" href="#">Clients Management</a></li>
 					<li class="nav__item"><a href="#">Administration</a></li>
 					<li class="nav__item"><a href="#">Statistics</a></li>
 					<li class="nav__item is-greate"><a href="#"><span>+ Create New Project</span></a></li>
+					<li class="nav__item is-greate"><a href="#"><span>+ Create New Client Account</span></a></li>
 				</div>
 			</div>
 		</div>
@@ -55,30 +62,37 @@
 			<div class="item">
 				<!-- topic -->
 				<div class="topic">
-					<!-- filter -->
-					<div class="filter js-filter">Requests</div>
+					<div class="col w190">
+						<h3 class="title">New Clients Requests</h3>
+					</div>
+					<div class="col w235">
+						<!-- serch -->
+						<form class="search">
+							<input type="text" class="input" placeholder="Find File">
+						</form>
+					</div>
 					<!-- status -->
 					<ul class="status">
-						<li class="status__item">New: 12</li>
-						<li class="status__item">Pending: 3</li>
+						<li class="status__item is-orange">New: 12</li>
+						<li class="status__item is-green">Pending: 3</li>
 					</ul>
 				</div>
 				<div class="item__in">
 					<table class="table">
 						<tr>
-							<th>Client</th>
-							<th>Project</th>
-							<th>Source Languages</th>
-							<th class="text-left">Translate to</th>
-							<th>Status</th>
-							<th>Action</th>
+							<th>Client Name</th>
+							<th>Company</th>
+							<th class="text-left pl35 w190">Email</th>
+							<th class="text-left">Date</th>
+							<th class="w76 text-left">Status</th>
+							<th class="pl15 text-left">Action</th>
 						</tr>
 						<tr>
-							<td>BestClientEver</td>
-							<td>MyProjectNuberOne</td>
-							<td class="is-uppercase">RU, HR, SL</td>
-							<td class="text-left is-uppercase">EN, DE, ES, FR</td>
-							<td class="is-uppercase">NEW</td>
+							<td>John BestClientEver</td>
+							<td>ClientCompanyName</td>
+							<td class="text-left">emailname@company.com</td>
+							<td class="text-left">12.12.2014</td>
+							<td class="text-left">NEW</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -98,11 +112,11 @@
 							</td>
 						</tr>
 						<tr>
-							<td>BestClientEver</td>
-							<td>MyProjectNuberOne</td>
-							<td class="is-uppercase">RU</td>
-							<td class="text-left is-uppercase">EN, DE, ES, FR</td>
-							<td class="is-uppercase">NEW</td>
+							<td>John BestClientEver</td>
+							<td>ClientCompanyName</td>
+							<td class="text-left">emailname@company.com</td>
+							<td class="text-left">12.12.2014</td>
+							<td class="text-left">NEW</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -122,11 +136,11 @@
 							</td>
 						</tr>
 						<tr>
-							<td>BestClientEver</td>
-							<td>MyProjectNuberOne</td>
-							<td class="is-uppercase">RU</td>
-							<td class="text-left is-uppercase">EN, DE, ES, FR</td>
-							<td class="is-uppercase">NEW</td>
+							<td>John BestClientEver</td>
+							<td>ClientCompanyName</td>
+							<td class="text-left">emailname@company.com</td>
+							<td class="text-left">12.12.2014</td>
+							<td class="text-left">NEW</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -146,11 +160,11 @@
 							</td>
 						</tr>
 						<tr>
-							<td>BestClientEver</td>
-							<td>MyProjectNuberOne</td>
-							<td class="is-uppercase">RU</td>
-							<td class="text-left is-uppercase">EN, DE, ES, FR</td>
-							<td class="is-uppercase">NEW</td>
+							<td>John BestClientEver</td>
+							<td>ClientCompanyName</td>
+							<td class="text-left">emailname@company.com</td>
+							<td class="text-left">12.12.2014</td>
+							<td class="text-left">NEW</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -170,11 +184,11 @@
 							</td>
 						</tr>
 						<tr>
-							<td>BestClientEver</td>
-							<td>MyProjectNuberOne</td>
-							<td class="is-uppercase">RU</td>
-							<td class="text-left is-uppercase">EN, DE, ES, FR</td>
-							<td class="is-uppercase">NEW</td>
+							<td>John BestClientEver</td>
+							<td>ClientCompanyName</td>
+							<td class="text-left">emailname@company.com</td>
+							<td class="text-left">12.12.2014</td>
+							<td class="text-left">NEW</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -194,11 +208,11 @@
 							</td>
 						</tr>
 						<tr>
-							<td>BestClientEver</td>
-							<td>MyProjectNuberOne</td>
-							<td class="is-uppercase">RU</td>
-							<td class="text-left is-uppercase">EN, DE, ES, FR</td>
-							<td class="is-uppercase">NEW</td>
+							<td>John BestClientEver</td>
+							<td>ClientCompanyName</td>
+							<td class="text-left">emailname@company.com</td>
+							<td class="text-left">12.12.2014</td>
+							<td class="text-left">NEW</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -218,11 +232,11 @@
 							</td>
 						</tr>
 						<tr>
-							<td>BestClientEver</td>
-							<td>MyProjectNuberOne</td>
-							<td class="is-uppercase">RU</td>
-							<td class="text-left is-uppercase">EN, DE, ES, FR</td>
-							<td class="is-uppercase">NEW</td>
+							<td>John BestClientEver</td>
+							<td>ClientCompanyName</td>
+							<td class="text-left">emailname@company.com</td>
+							<td class="text-left">12.12.2014</td>
+							<td class="text-left">NEW</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -248,35 +262,40 @@
 			<div class="item">
 				<!-- topic -->
 				<div class="topic">
-					<!-- filter -->
-					<div class="filter js-filter">Projects</div>
+					<div class="col w190">
+						<h3 class="title">Clients</h3>
+					</div>
+					<div class="col w235">
+						<!-- serch -->
+						<form class="search">
+							<input type="text" class="input" placeholder="Find Client">
+						</form>
+					</div>
 					<!-- status -->
 					<ul class="status">
-						<li class="status__item is-orange">In Progress: 12</li>
-						<li class="status__item is-green">Ready: 3</li>
+						<li class="status__item">
+							<span class="is-orange">Active:</span>
+							<span class="is-green">300</span>
+						</li>
 						<li class="status__item">Archived: 45</li>
 					</ul>
 				</div>
 				<div class="item__in">
 					<table class="table">
 						<tr>
-							<th>Project</th>
-							<th>Source Languages</th>
-							<th>Translate to</th>
-							<th>Words count</th>
-							<th>Attached Files</th>
-							<th>Status</th>
-							<th>Payment</th>
-							<th>Action</th>
+							<th>Client Name</th>
+							<th>Company</th>
+							<th class="text-left pl35 w190">Email</th>
+							<th class="text-left">Date</th>
+							<th class="w76 text-left">Status</th>
+							<th class="pl15 text-left">Action</th>
 						</tr>
 						<tr class="is-active">
-							<td>MyProjectNuberOne</td>
-							<td>RU, BG, NL</td>
-							<td>EN, DE, ES, FR</td>
-							<td>1500</td>
-							<td>12</td>
-							<td>In Progress</td>
-							<td>50%</td>
+							<td>John BestClientEver</td>
+							<td>ClientCompanyName</td>
+							<td class="text-left">emailname@company.com</td>
+							<td class="text-left">12.12.2014</td>
+							<td class="text-left is-uppercase">active</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -296,13 +315,11 @@
 							</td>
 						</tr>
 						<tr>
-							<td>MyProjectNuberOne</td>
-							<td>RU, BG, NL</td>
-							<td>EN, DE, ES, FR</td>
-							<td>1500</td>
-							<td>12</td>
-							<td>In Progress</td>
-							<td>50%</td>
+							<td>John BestClientEver</td>
+							<td>ClientCompanyName</td>
+							<td class="text-left">emailname@company.com</td>
+							<td class="text-left">12.12.2014</td>
+							<td class="text-left is-uppercase">active</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -322,13 +339,11 @@
 							</td>
 						</tr>
 						<tr>
-							<td>MyProjectNuberOne</td>
-							<td>RU, BG, NL</td>
-							<td>EN, DE, ES, FR</td>
-							<td>1500</td>
-							<td>12</td>
-							<td>In Progress</td>
-							<td>50%</td>
+							<td>John BestClientEver</td>
+							<td>ClientCompanyName</td>
+							<td class="text-left">emailname@company.com</td>
+							<td class="text-left">12.12.2014</td>
+							<td class="text-left is-uppercase">active</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -348,13 +363,11 @@
 							</td>
 						</tr>
 						<tr>
-							<td>MyProjectNuberOne</td>
-							<td>RU, BG, NL</td>
-							<td>EN, DE, ES, FR</td>
-							<td>1500</td>
-							<td>12</td>
-							<td>In Progress</td>
-							<td>50%</td>
+							<td>John BestClientEver</td>
+							<td>ClientCompanyName</td>
+							<td class="text-left">emailname@company.com</td>
+							<td class="text-left">12.12.2014</td>
+							<td class="text-left is-uppercase">active</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -374,13 +387,11 @@
 							</td>
 						</tr>
 						<tr>
-							<td>MyProjectNuberOne</td>
-							<td>RU, BG, NL</td>
-							<td>EN, DE, ES, FR</td>
-							<td>1500</td>
-							<td>12</td>
-							<td>In Progress</td>
-							<td>50%</td>
+							<td>John BestClientEver</td>
+							<td>ClientCompanyName</td>
+							<td class="text-left">emailname@company.com</td>
+							<td class="text-left">12.12.2014</td>
+							<td class="text-left is-uppercase">active</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -399,14 +410,12 @@
 								</div>
 							</td>
 						</tr>
-						<tr class="is-orange">
-							<td>MyProjectNuberOne</td>
-							<td>RU, BG, NL</td>
-							<td>EN, DE, ES, FR</td>
-							<td>1500</td>
-							<td>12</td>
-							<td>In Progress</td>
-							<td>50%</td>
+						<tr>
+							<td>John BestClientEver</td>
+							<td>ClientCompanyName</td>
+							<td class="text-left">emailname@company.com</td>
+							<td class="text-left">12.12.2014</td>
+							<td class="text-left is-uppercase">active</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -425,14 +434,12 @@
 								</div>
 							</td>
 						</tr>
-						<tr class="is-green">
-							<td>MyProjectNuberOne</td>
-							<td>RU, BG, NL</td>
-							<td>EN, DE, ES, FR</td>
-							<td>1500</td>
-							<td>12</td>
-							<td>In Progress</td>
-							<td>50%</td>
+						<tr>
+							<td>John BestClientEver</td>
+							<td>ClientCompanyName</td>
+							<td class="text-left">emailname@company.com</td>
+							<td class="text-left">12.12.2014</td>
+							<td class="text-left is-uppercase">active</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -452,6 +459,65 @@
 							</td>
 						</tr>
 					</table>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="item">
+				<div class="item__wrap">
+					<div class="item__in item__in_mod">
+						<h3 class="title">Client Details</h3>
+						<!-- details -->
+						<div class="details">
+							<div class="details__field">
+								<div class="details__row">
+									<div class="details__left">Name:</div>
+									<div class="details__right">John BestClientEver</div>
+								</div>
+								<div class="details__row">
+									<div class="details__left">Company/Position:</div>
+									<div class="details__right">CEO at ClientCompanyName</div>
+								</div>
+								<div class="details__row">
+									<div class="details__left">Phone:</div>
+									<div class="details__right">+49 6556 5656 5656</div>
+								</div>
+								<div class="details__row">
+									<div class="details__left">Email:</div>
+									<div class="details__right">emailname@companyname.com</div>
+								</div>
+								<div class="details__row">
+									<div class="details__left">Address:</div>
+									<div class="details__right">323232 Brooklin, 21th street #23, USA</div>
+								</div>
+								<div class="details__row">
+									<div class="details__left">Website:</div>
+									<div class="details__right">www.companyname.com</div>
+								</div>
+							</div>
+							<div class="details__field">
+								<div class="details__row">
+									<div class="details__left">Status:</div>
+									<div class="details__right">Projects In progress: <span class="is-orange">5,</span>  Payment pending: <span class="is-orange">0</span>, Finished Projects: <span class="is-orange">10</span></div>
+								</div>
+								<div class="details__row">
+									<div class="details__left">Discount Words:</div>
+									<div class="details__right">
+										Presented This Month: <span class="is-orange">100,</span> Used This Month: <span class="is-orange">0,</span> Presented Total: <span class="is-orange">500,</span> Used: <span class="is-orange">200.</span>
+										<a href="#" class="details__link">MANAGE DISCOUNTS</a>
+									</div>
+								</div>
+								<div class="details__row">
+									<div class="details__left">Files:</div>
+									<div class="details__right">Uploaded 29 files, 29MB Total 
+										<a href="#" class="details__link">SHOW ALL FILES</a>
+									</div>
+								</div>
+							</div>
+							<div class="details__field">
+								<a href="#" class="details__link">SHOW CLIENT PROJECTS</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
