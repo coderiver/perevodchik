@@ -203,6 +203,9 @@ body
 		&.item__in_mod
 			margin-bottom: 0
 			border-bottom: none
+		&.item__in_bot
+			margin-bottom: 0
+			padding-bottom: 0
 	.item__arr
 		position: absolute
 		top: 2px
@@ -273,6 +276,9 @@ body
 
 .is-darken
 	color: #777
+
+.is-lgray
+	color: #999
 
 .is-center
 	text-align: center
@@ -497,6 +503,7 @@ body
 	cursor: pointer
 	border: 1px solid #ccc
 	+border-radius(5px)
+	background: #fff
 	+box
 	&.is-active
 		+border-radius(5px 5px 0 0)
@@ -604,6 +611,7 @@ body
 	span
 		position: relative
 		padding-left: 20px
+		display: block
 		&:before
 			content: ''
 			border: 1px solid #a4a4a4
@@ -611,17 +619,19 @@ body
 		&:after
 			position: absolute
 			content: ''
-			top: 2px
+			top: 50%
 			left: 4px
 			width: 7px
 			height: 7px
+			+translate(0,-50%)
 			background: #999
 			display: none
 	input,
 	span:before
 		position: absolute
-		top: -2px
+		top: 50%
 		left: 0
+		+translate(0,-50%)
 		width: 15px
 		height: 15px
 		+box
@@ -673,11 +683,24 @@ body
 a.title
 	display: block
 
+// strong
+.strong
+	font-weight: bold
+
+// wrap
+.wrap
+	padding-left: 5px
+	.row
+		margin-top: 0
+		line-height: 1.4
+
 // row
 .row
 	margin-top: 8px
 	line-height: 22px
 	+clr
+	&.row_mod
+		margin-top: 4px
 	* 
 		line-height: 1.4
 	span
@@ -694,6 +717,8 @@ a.title
 	display: inline-block
 	&:first-child
 		margin-left: 0
+	&.col_bot
+		vertical-align: bottom
 	&.w82,
 	&.w125
 		margin-left: 4px
@@ -774,6 +799,8 @@ a.title
 		color: #444
 		font-weight: bold
 		overflow: hidden
+		&.is-lgray
+			color: #999
 	.details__link
 		margin-left: 5px
 
@@ -909,6 +936,81 @@ a.title
 	.details__field
 		&:first-child
 			margin-top: 0
+
+// source
+.source
+	color: #999
+	border-bottom: 1px solid #999
+	&.source_dott
+		border-bottom: 1px dotted #999
+	&.is-visible
+		.source__in
+			background: #f5f5f5
+		.source__detail
+			display: block
+		.source__btn
+			&:before
+				background: #666
+			&:after
+				+rotate(180)
+	.source__in
+		margin: 2px 0 2px -5px
+		padding-left: 5px
+	.source__row
+		padding: 8px 0 7px
+	.source__title
+		font-size: 14px
+	.source__btn
+		position: relative
+		line-height: 1.1
+		cursor: pointer
+		&:hover
+			text-decoration: underline
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			right: 4px
+			width: 16px
+			height: 16px
+			margin-top: -8px
+			z-index: 2
+			background-color: #cdcdcd
+			+border-radius(5px)
+		&:after
+			content: ""
+			position: absolute
+			right: 8px
+			top: 50%
+			margin-top: -2px
+			z-index: 3
+			+arr(8,4,#fff,b)
+	.source__detail
+		padding: 5px 0 10px
+		display: none
+	.input,
+	.select
+		color: $gray
+	.checkbox
+		line-height: 1.1
+	.col
+		margin-left: 7px
+		&:first-child
+			margin-left: 0
+
+// report
+.report
+	margin: 20px 0 30px
+	text-align: center
+	&.report_mod
+		margin-bottom: 0
+	&.report_top
+		margin-top: 6px
+	.btn
+		margin-left: 5px
+		&:first-child
+			margin-left: 0
+
 // width
 .w49
 	width: 49px
@@ -920,8 +1022,12 @@ a.title
 	width: 85px
 .w125
 	width: 125px
+.w129
+	width: 129px
 .w152
 	width: 152px
+.w173
+	width: 173px
 .w190
 	width: 190px
 .w235
@@ -932,6 +1038,8 @@ a.title
 	width: 278px
 .w318
 	width: 318px
+.w347
+	width: 347px
 .w569
 	width: 569px
 .w50p
