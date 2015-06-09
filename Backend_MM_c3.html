@@ -12,7 +12,7 @@
 </head>
 <body>
 <!-- BEGIN  out-->
-<div class="out js-out">
+<div class="out">
 	<!-- header -->
 	<header class="header">
 		<!-- logo -->
@@ -39,13 +39,18 @@
 				<h3 class="topic">My Dashboard</h3>
 				<!-- nav -->
 				<div class="nav">
-					<li class="nav__item"><a class="is-active" href="#">PROJECTS/REQUESTS</a></li>
+					<li class="nav__item"><a class="is-active" href="#">MyProjects</a></li>
 					<li class="nav__item"><a href="#">File Storage</a></li>
-					<li class="nav__item"><a href="#">Finances/Discounts</a></li>
-					<li class="nav__item"><a href="#">Clients Management</a></li>
-					<li class="nav__item"><a href="#">Administration</a></li>
-					<li class="nav__item"><a href="#">Statistics</a></li>
+					<li class="nav__item"><a href="#">My Finances</a></li>
+					<li class="nav__item"><a href="#">Edit Profile</a></li>
 					<li class="nav__item is-greate"><a href="#"><span>+ Create New Project</span></a></li>
+				</div>
+				<!-- in -->
+				<div class="in">
+					<div class="ban">
+						<a href="#" class="ban__row">specical offer<br>only for you</a>
+						<a href="#" class="ban__row">advertisements</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -89,33 +94,6 @@
 							</div>
 							<!-- row -->
 							<div class="row">
-								<div class="col w278">
-									<div class="label">Industruy:</div>
-									<div class="select js-select">
-										<span class="select__text js-select-text"></span>
-										<ul class="select__list js-select-list">
-											<li data-val="var0">var0</li>
-											<li data-val="var1">var1</li>
-											<li data-val="var2">var2</li>
-											<li data-val="var3">var3</li>
-										</ul>
-										<select>
-											<option value="var0">var0</option>
-											<option value="var1">var1</option>
-											<option value="var2">var2</option>
-											<option value="var3">var3</option>
-										</select>
-									</div>
-								</div>
-								<div class="col w278">
-									<label class="checkbox is-uppercase">
-										<input type="checkbox" checked>
-										<span>NOTARIUS SIGNMENT REQUIRED</span>
-									</label>
-								</div>
-							</div>
-							<!-- row -->
-							<div class="row">
 								<div class="label">Additional details:</div>
 								<textarea class="textarea"></textarea>
 							</div>
@@ -127,7 +105,7 @@
 						<div class="row">
 							<!-- w569 -->
 							<div class="w569">
-								<div class="col w152">
+								<div class="col w278">
 									<div class="label">Source Language:</div>
 									<div class="select js-select">
 										<span class="select__text js-select-text"></span>
@@ -145,7 +123,7 @@
 										</select>
 									</div>
 								</div>
-								<div class="col w152">
+								<div class="col w278">
 									<div class="label">Translate to Language:</div>
 									<div class="select js-select">
 										<span class="select__text js-select-text"></span>
@@ -163,67 +141,11 @@
 										</select>
 									</div>
 								</div>
-								<div class="col w239">
-									<div class="label">Assign Translator:</div>
-									<div class="translator is-visible">
-										<span class="translator__text"></span>
-										<div class="translator__block">
-											<div class="translator__row">
-												<div class="translator__title">Name</div>
-												<div class="translator__title">Availability</div>
-												<div class="translator__title">Perfomance</div>
-											</div>
-											<div class="translator__row">
-												<div class="translator__col">Semenova V.</div>
-												<div class="translator__col is-uppercase">Yes</div>
-												<div class="translator__col is-uppercase">Good</div>
-											</div>
-											<div class="translator__row">
-												<div class="translator__col">Semenova V.</div>
-												<div class="translator__col is-uppercase">Yes</div>
-												<div class="translator__col">Average</div>
-											</div>
-											<div class="translator__row">
-												<div class="translator__col">Semenova V.</div>
-												<div class="translator__col is-uppercase">Yes</div>
-												<div class="translator__col is-uppercase">Good</div>
-											</div>
-											<div class="translator__row">
-												<div class="translator__col">Semenova V.</div>
-												<div class="translator__col is-uppercase">Yes</div>
-												<div class="translator__col is-uppercase">Good</div>
-											</div>
-										</div>
-									</div>
-								</div>
 							</div>
 						</div>
 						<!-- field -->
 						<div class="field">
 							<button class="btn" type="button">ADD MORE</button>
-						</div>
-					</div>
-					<div class="item__in">
-						<!-- field -->
-						<div class="field">
-							<div class="col w278">
-								<div class="label">Assign Manager:</div>
-								<div class="select js-select">
-									<span class="select__text js-select-text"></span>
-									<ul class="select__list js-select-list">
-										<li data-val="var0">var0</li>
-										<li data-val="var1">var1</li>
-										<li data-val="var2">var2</li>
-										<li data-val="var3">var3</li>
-									</ul>
-									<select>
-										<option value="var0">var0</option>
-										<option value="var1">var1</option>
-										<option value="var2">var2</option>
-										<option value="var3">var3</option>
-									</select>
-								</div>
-							</div>
 						</div>
 					</div>
 					<div class="item__in">
@@ -250,11 +172,11 @@
 									<h3 class="title">Additional Services Interested</h3>
 								</div>
 								<!-- row -->
-								<div class="row">
+								<div class="row mb10">
 									<div class="col">
 										<label class="checkbox">
 											<input type="checkbox">
-											<span>Something</span>
+											<span>NOTARIUS</span>
 										</label>
 									</div>
 									<div class="col">
@@ -275,12 +197,18 @@
 											<span>Research/Design</span>
 										</label>
 									</div>
+									<div class="col">
+										<label class="checkbox">
+											<input type="checkbox">
+											<span>Invoise/Proposal</span>
+										</label>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<!-- row -->
-					<div class="row">
+					<div class="row mt38">
 						<button class="btn">CREATE</button>
 					</div>
 				</div>

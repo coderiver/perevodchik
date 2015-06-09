@@ -66,16 +66,10 @@ body
 	font-size: 12px 
 	line-height: 1.4
 	+mp
-	
-	&:before
-		position: fixed
-		content: ''
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		opacity: .8
-		background: url(../img/bg.png) repeat 1px 0
+	background: url(../img/bg.png) repeat 1px 0
+	&.is-white
+		+vertical
+		background: #fff
 	a
 		text-decoration: none
 		&:hover
@@ -255,42 +249,17 @@ body
 // status
 .status
 	font-size: 0
+	font-size: 18px
+	line-height: 18px
 	.status__item
 		margin-left: 12px
 		padding-left: 12px
-		font-size: 18px
-		line-height: 18px
 		border-left: 1px solid $light-gray
 		display: inline-block
 		&:first-child
 			padding: 0
 			margin: 0
 			border: none
-
-// modifiers
-.is-orange
-	color: #f60
-
-.is-green
-	color: #090
-
-.is-darken
-	color: #777
-
-.is-lgray
-	color: #999
-
-.is-center
-	text-align: center
-	.input
-		text-align: center
-	.label
-		text-align: left
-
-.is-right
-	text-align: right
-	.label
-		text-align: left
 
 // nav
 .nav
@@ -436,6 +405,7 @@ body
 .table
 	margin-top: 2px
 	color: $gray
+	table-layout: fixed
 	&.table_mod
 		td,th
 			text-align: left
@@ -456,6 +426,43 @@ body
 				+text-shadow(0px 0px 0px #444)
 				&:before
 					display: block
+		td,th
+			&.w49
+				width: 49px
+			&.w76
+				width: 76px
+			&.w82
+				width: 82px
+			&.w85
+				width: 85px
+			&.w107
+				width: 107px
+			&.w125
+				width: 125px
+			&.w129
+				width: 129px
+			&.w152
+				width: 152px
+			&.w173
+				width: 173px
+			&.w190
+				width: 190px
+			&.w218
+				width: 218px
+			&.w235
+				width: 235px
+			&.w239
+				width: 239px
+			&.w278
+				width: 278px
+			&.w318
+				width: 318px
+			&.w347
+				width: 347px
+			&.w569
+				width: 569px
+			&.w50p
+				width: 49%
 	td,th
 		text-align: center
 		+box
@@ -486,13 +493,17 @@ body
 				content: ''
 				top: 50%
 				left: 0
-				margin-top: -8px
+				margin-top: -3px
+				+translate(0,-50%)
 				+arr(5,10,#444,r)
 				display: none
+	a
+		color: #ff6600
+		text-decoration: underline
+		&:hover
+			text-decoration: none
 	.select
 		width: 68px
-	.w49
-		width: 49px
 
 // select
 .select
@@ -1011,6 +1022,98 @@ a.title
 		&:first-child
 			margin-left: 0
 
+// authorization
+.authorization
+	padding: 20px
+	min-width: 288px
+	vertical-align: middle
+	color: #999
+	background: url(../img/authoriz-bg.png) repeat
+	display: inline-block
+	+box
+	&.is-forgot
+		.authorization__in
+			padding-top: 22px
+	.authorization__in
+		padding: 10px 6px 10px 10px
+		margin-bottom: 13px
+		min-height: 154px
+		background: #fff
+		+box
+	.authorization__wrap
+		font-size: 12px
+		line-height: 1.4
+		text-align: left
+	.authorization__text
+		margin-top: 7px
+	.topic
+		padding: 0
+	.btn
+		width: 100%
+	a
+		color: #999
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+
+// ban
+.ban
+	padding: 0 38px
+	border: 1px solid #999
+	margin-left: 20px
+	text-align: center
+	width: 237px
+	+border-radius(10px)
+	+box
+	&.ban_dark
+		background: #999
+	.ban__row
+		margin: 32px 0 15px
+		font-size: 18px
+		text-transform: uppercase
+		line-height: 1.1
+		color: #777
+		display: block
+		+gsl
+
+// full-right
+.full-right
+	float: right
+
+// modifiers
+.is-orange
+	color: #f60
+
+.is-green
+	color: #090
+
+.is-darken
+	color: #777
+
+.is-lgray
+	color: #999
+
+.is-red
+	color: #ff0000
+
+.is-center
+	text-align: center
+	.input
+		text-align: center
+	.label
+		text-align: left
+
+.is-right
+	text-align: right
+	.label
+		text-align: left
+
+// margin
+.mt38
+	margin-top: 38px
+.mb10
+	margin-bottom: 10px
+
 // width
 .w49
 	width: 49px
@@ -1030,6 +1133,8 @@ a.title
 	width: 173px
 .w190
 	width: 190px
+.w218
+	width: 218px
 .w235
 	width: 235px
 .w239
