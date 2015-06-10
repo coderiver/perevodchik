@@ -39,13 +39,93 @@
 				<h3 class="topic">My Dashboard</h3>
 				<!-- nav -->
 				<div class="nav">
-					<li class="nav__item"><a class="is-active" href="#">PROJECTS/REQUESTS</a></li>
+					<li class="nav__item"><a class="is-active" href="#">Projects/Requests</a></li>
 					<li class="nav__item"><a href="#">File Storage</a></li>
-					<li class="nav__item"><a href="#">Finances/Discounts</a></li>
-					<li class="nav__item"><a href="#">Clients Management</a></li>
-					<li class="nav__item"><a href="#">Administration</a></li>
 					<li class="nav__item"><a href="#">Statistics</a></li>
-					<li class="nav__item is-greate"><a href="#"><span>+ Create New Project</span></a></li>
+					<li class="nav__item"><a href="#">My Profile</a></li>
+				</div>
+				<!-- in -->
+				<div class="in">
+					<!-- topic -->
+					<div class="topic">My Availability <a href="#">SHOW NEXT MONTH</a></div>
+					<!-- calendar -->
+					<div class="calendar">
+						<div class="row">
+							<div class="day is-selected">01</div>
+							<div class="day is-selected">02</div>
+							<div class="day is-selected">03</div>
+							<div class="day is-selected">04</div>
+							<div class="day is-selected">05</div>
+							<div class="day is-weekend">06</div>
+							<div class="day is-weekend">07</div>
+						</div>
+						<div class="row">
+							<div class="day">08</div>
+							<div class="day">09</div>
+							<div class="day">10</div>
+							<div class="day">11</div>
+							<div class="day">12</div>
+							<div class="day is-weekend">13</div>
+							<div class="day is-weekend">14</div>
+						</div>
+						<div class="row">
+							<div class="day is-selected">15</div>
+							<div class="day is-selected">16</div>
+							<div class="day is-selected">17</div>
+							<div class="day is-selected">18</div>
+							<div class="day is-selected">19</div>
+							<div class="day is-weekend">20</div>
+							<div class="day is-weekend">21</div>
+						</div>
+						<div class="row">
+							<div class="day">22</div>
+							<div class="day">23</div>
+							<div class="day">24</div>
+							<div class="day">25</div>
+							<div class="day">26</div>
+							<div class="day is-weekend">27</div>
+							<div class="day is-weekend">28</div>
+						</div>
+						<div class="row">
+							<div class="day">29</div>
+							<div class="day">30</div>
+							<div class="day">31</div>
+						</div>
+						<div class="row is-center"><a href="#" class="is-orange">EDIT</a></div>
+					</div>
+					<!-- item -->
+					<div class="item item_deadlin">
+						<!-- field -->
+						<div class="field">
+							<!-- topic -->
+							<div class="topic">
+								My Deadlines
+								<a href="#">SHOW ALL</a>
+							</div>
+						</div>
+						<div class="item__wrap">
+							<div class="field">
+								<p>12.12.2014  <a href="#" class="is-orange">OPEN</a></p>
+								<p>ProjectNameNoOne (1500 Words)RO</p>
+							</div>
+							<div class="field">
+								<p>12.12.2014  <a href="#" class="is-orange">OPEN</a></p>
+								<p>ProjectNameNoOne (1500 Words)RO</p>
+							</div>
+							<div class="field">
+								<p>12.12.2014  <a href="#" class="is-orange">OPEN</a></p>
+								<p>ProjectNameNoOne (1500 Words)RO</p>
+							</div>
+							<div class="field">
+								<p>12.12.2014  <a href="#" class="is-orange">OPEN</a></p>
+								<p>ProjectNameNoOne (1500 Words)RO</p>
+							</div>
+							<div class="field">
+								<p>12.12.2014  <a href="#" class="is-orange">OPEN</a></p>
+								<p>ProjectNameNoOne (1500 Words)RO</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -55,30 +135,33 @@
 			<div class="item">
 				<!-- topic -->
 				<div class="topic">
-					<!-- filter -->
-					<div class="filter js-filter">Requests</div>
+					Requests
 					<!-- status -->
 					<ul class="status">
-						<li class="status__item">New: 12</li>
-						<li class="status__item">Pending: 3</li>
+						<li class="status__item is-orange">New: 12</li>
+						<li class="status__item is-green">Pending: 3</li>
 					</ul>
 				</div>
 				<div class="item__in">
 					<table class="table">
 						<tr>
-							<th>Client</th>
 							<th>Project</th>
-							<th>Source Languages</th>
-							<th class="text-left">Translate to</th>
+							<th>Translate from</th>
+							<th>Translate to</th>
+							<th>Deadline</th>
+							<th>Words count</th>
+							<th>Attached Files</th>
 							<th>Status</th>
 							<th>Action</th>
 						</tr>
 						<tr>
-							<td>BestClientEver</td>
 							<td>MyProjectNuberOne</td>
-							<td class="is-uppercase">RU, HR, SL</td>
-							<td class="text-left is-uppercase">EN, DE, ES, FR</td>
-							<td class="is-uppercase">NEW</td>
+							<td>RU</td>
+							<td>EN</td>
+							<td>15.12.2014</td>
+							<td>1500</td>
+							<td>12</td>
+							<td>In Progress</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -98,11 +181,13 @@
 							</td>
 						</tr>
 						<tr>
-							<td>BestClientEver</td>
 							<td>MyProjectNuberOne</td>
-							<td class="is-uppercase">RU</td>
-							<td class="text-left is-uppercase">EN, DE, ES, FR</td>
-							<td class="is-uppercase">NEW</td>
+							<td>RU</td>
+							<td>EN</td>
+							<td>15.12.2014</td>
+							<td>1500</td>
+							<td>12</td>
+							<td>New</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -122,11 +207,13 @@
 							</td>
 						</tr>
 						<tr>
-							<td>BestClientEver</td>
 							<td>MyProjectNuberOne</td>
-							<td class="is-uppercase">RU</td>
-							<td class="text-left is-uppercase">EN, DE, ES, FR</td>
-							<td class="is-uppercase">NEW</td>
+							<td>RU</td>
+							<td>EN</td>
+							<td>15.12.2014</td>
+							<td>1500</td>
+							<td>12</td>
+							<td>New</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -146,11 +233,13 @@
 							</td>
 						</tr>
 						<tr>
-							<td>BestClientEver</td>
 							<td>MyProjectNuberOne</td>
-							<td class="is-uppercase">RU</td>
-							<td class="text-left is-uppercase">EN, DE, ES, FR</td>
-							<td class="is-uppercase">NEW</td>
+							<td>RU</td>
+							<td>EN</td>
+							<td>15.12.2014</td>
+							<td>1500</td>
+							<td>12</td>
+							<td>New</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -170,11 +259,13 @@
 							</td>
 						</tr>
 						<tr>
-							<td>BestClientEver</td>
 							<td>MyProjectNuberOne</td>
-							<td class="is-uppercase">RU</td>
-							<td class="text-left is-uppercase">EN, DE, ES, FR</td>
-							<td class="is-uppercase">NEW</td>
+							<td>RU</td>
+							<td>EN</td>
+							<td>15.12.2014</td>
+							<td>1500</td>
+							<td>12</td>
+							<td>New</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -194,11 +285,13 @@
 							</td>
 						</tr>
 						<tr>
-							<td>BestClientEver</td>
 							<td>MyProjectNuberOne</td>
-							<td class="is-uppercase">RU</td>
-							<td class="text-left is-uppercase">EN, DE, ES, FR</td>
-							<td class="is-uppercase">NEW</td>
+							<td>RU</td>
+							<td>EN</td>
+							<td>15.12.2014</td>
+							<td>1500</td>
+							<td>12</td>
+							<td>New</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -218,11 +311,39 @@
 							</td>
 						</tr>
 						<tr>
-							<td>BestClientEver</td>
 							<td>MyProjectNuberOne</td>
-							<td class="is-uppercase">RU</td>
-							<td class="text-left is-uppercase">EN, DE, ES, FR</td>
-							<td class="is-uppercase">NEW</td>
+							<td>RU</td>
+							<td>EN</td>
+							<td>15.12.2014</td>
+							<td>1500</td>
+							<td>12</td>
+							<td>New</td>
+							<td>
+								<div class="select js-select">
+									<span class="select__text js-select-text">Choose var</span>
+									<ul class="select__list js-select-list">
+										<li data-val="var0">var0</li>
+										<li data-val="var1">var1</li>
+										<li data-val="var2">var2</li>
+										<li data-val="var3">var3</li>
+									</ul>
+									<select>
+										<option value="var0">var0</option>
+										<option value="var1">var1</option>
+										<option value="var2">var2</option>
+										<option value="var3">var3</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>MyProjectNuberOne</td>
+							<td>RU</td>
+							<td>EN</td>
+							<td>15.12.2014</td>
+							<td>1500</td>
+							<td>12</td>
+							<td>New</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -248,8 +369,7 @@
 			<div class="item">
 				<!-- topic -->
 				<div class="topic">
-					<!-- filter -->
-					<div class="filter js-filter">Projects</div>
+					Projects
 					<!-- status -->
 					<ul class="status">
 						<li class="status__item is-orange">In Progress: 12</li>
@@ -261,22 +381,22 @@
 					<table class="table">
 						<tr>
 							<th>Project</th>
-							<th>Source Languages</th>
+							<th>Translate from</th>
 							<th>Translate to</th>
+							<th>Deadline</th>
 							<th>Words count</th>
 							<th>Attached Files</th>
 							<th>Status</th>
-							<th>Payment</th>
 							<th>Action</th>
 						</tr>
 						<tr class="is-active">
 							<td>MyProjectNuberOne</td>
-							<td>RU, BG, NL</td>
-							<td>EN, DE, ES, FR</td>
+							<td>RU</td>
+							<td>EN</td>
+							<td>15.12.2014</td>
 							<td>1500</td>
 							<td>12</td>
 							<td>In Progress</td>
-							<td>50%</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -297,12 +417,12 @@
 						</tr>
 						<tr>
 							<td>MyProjectNuberOne</td>
-							<td>RU, BG, NL</td>
-							<td>EN, DE, ES, FR</td>
+							<td>RU</td>
+							<td>EN</td>
+							<td>15.12.2014</td>
 							<td>1500</td>
 							<td>12</td>
-							<td>In Progress</td>
-							<td>50%</td>
+							<td>New</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -323,12 +443,12 @@
 						</tr>
 						<tr>
 							<td>MyProjectNuberOne</td>
-							<td>RU, BG, NL</td>
-							<td>EN, DE, ES, FR</td>
+							<td>RU</td>
+							<td>EN</td>
+							<td>15.12.2014</td>
 							<td>1500</td>
 							<td>12</td>
-							<td>In Progress</td>
-							<td>50%</td>
+							<td>New</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -349,12 +469,12 @@
 						</tr>
 						<tr>
 							<td>MyProjectNuberOne</td>
-							<td>RU, BG, NL</td>
-							<td>EN, DE, ES, FR</td>
+							<td>RU</td>
+							<td>EN</td>
+							<td>15.12.2014</td>
 							<td>1500</td>
 							<td>12</td>
-							<td>In Progress</td>
-							<td>50%</td>
+							<td>New</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -375,12 +495,12 @@
 						</tr>
 						<tr>
 							<td>MyProjectNuberOne</td>
-							<td>RU, BG, NL</td>
-							<td>EN, DE, ES, FR</td>
+							<td>RU</td>
+							<td>EN</td>
+							<td>15.12.2014</td>
 							<td>1500</td>
 							<td>12</td>
-							<td>In Progress</td>
-							<td>50%</td>
+							<td>New</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -399,14 +519,14 @@
 								</div>
 							</td>
 						</tr>
-						<tr class="is-orange">
+						<tr>
 							<td>MyProjectNuberOne</td>
-							<td>RU, BG, NL</td>
-							<td>EN, DE, ES, FR</td>
+							<td>RU</td>
+							<td>EN</td>
+							<td>15.12.2014</td>
 							<td>1500</td>
 							<td>12</td>
-							<td>In Progress</td>
-							<td>50%</td>
+							<td>New</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -425,14 +545,40 @@
 								</div>
 							</td>
 						</tr>
-						<tr class="is-green">
+						<tr>
 							<td>MyProjectNuberOne</td>
-							<td>RU, BG, NL</td>
-							<td>EN, DE, ES, FR</td>
+							<td>RU</td>
+							<td>EN</td>
+							<td>15.12.2014</td>
 							<td>1500</td>
 							<td>12</td>
-							<td>In Progress</td>
-							<td>50%</td>
+							<td>New</td>
+							<td>
+								<div class="select js-select">
+									<span class="select__text js-select-text">Choose var</span>
+									<ul class="select__list js-select-list">
+										<li data-val="var0">var0</li>
+										<li data-val="var1">var1</li>
+										<li data-val="var2">var2</li>
+										<li data-val="var3">var3</li>
+									</ul>
+									<select>
+										<option value="var0">var0</option>
+										<option value="var1">var1</option>
+										<option value="var2">var2</option>
+										<option value="var3">var3</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>MyProjectNuberOne</td>
+							<td>RU</td>
+							<td>EN</td>
+							<td>15.12.2014</td>
+							<td>1500</td>
+							<td>12</td>
+							<td>New</td>
 							<td>
 								<div class="select js-select">
 									<span class="select__text js-select-text">Choose var</span>
@@ -452,6 +598,49 @@
 							</td>
 						</tr>
 					</table>
+				</div>
+				<div class="wrap">
+					<!-- details -->
+					<div class="details">
+						<div class="details__field"><div class="title">MyProjectNumberOne</div></div>
+						<div class="details__field">
+							<div class="details__row">
+								<div class="details__left">Source Language:</div>
+								<div class="details__right">RU, HR, SL</div>
+							</div>
+							<div class="details__row">
+								<div class="details__left">Translate to:</div>
+								<div class="details__right">EN, DE, ES, FR</div>
+							</div>
+							<div class="details__row">
+								<div class="details__left">Words count:</div>
+								<div class="details__right">1500 <a href="#">EDIT</a></div>
+							</div>
+							<div class="details__row">
+								<div class="details__left">Attached Files:</div>
+								<div class="details__right">File1.doc, File2.doc <a href="#">SHOW ALL FILES</a></div>
+							</div>
+							<div class="details__row">
+								<div class="details__left">Price:</div>
+								<div class="details__right">1200 USD <span class="is-orange">Accepted</span></div>
+							</div>
+							<div class="details__row">
+								<div class="details__left">Status:</div>
+								<div class="details__right">In progress  <span class="is-red">85%</span>  Ready till 24.12.2014</div>
+							</div>
+						</div>
+						<div class="details__field">
+							<div class="details__row">
+								<div class="details__left">Translated Files:</div>
+								<div class="details__right is-lgray">pending...</div>
+							</div>
+							<div class="details__row">
+								<div class="details__left">Invoice:</div>
+								<div class="details__right is-lgray">pending...</div>
+							</div>
+						</div>
+						<div class="details__field"><a href="#">OPEN PROJECT LOG</a></div>
+					</div>
 				</div>
 			</div>
 		</div>

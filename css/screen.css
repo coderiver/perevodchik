@@ -28,9 +28,9 @@ body.is-white:before { content: ""; display: inline-block; vertical-align: middl
 body a { text-decoration: none; }
 body a:hover { text-decoration: underline; }
 
-.out { position: relative; margin: 0 auto; padding-bottom: 48px; width: 1024px; height: auto; min-height: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.out.is-full { height: 100%; min-height: 540px; }
-.out.is-full .l-col2 { height: auto; min-height: 100%; }
+.out { position: relative; margin: 0 auto; padding-bottom: 48px; width: 1024px; height: auto; min-height: 540px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.out.is-full { height: 100%; min-height: 100%; }
+.out.is-full .l-col2 { height: 100%; }
 
 .header { position: relative; margin-bottom: 14px; padding: 12px 20px 16px; z-index: 2; background: url(../img/header-bg.png); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; *zoom: 1; }
 .header:after { content: " "; display: table; clear: both; }
@@ -57,10 +57,18 @@ body a:hover { text-decoration: underline; }
 .item.is-hide .filter:before { position: absolute; -ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
 .item.is-hide .table { display: none; }
 .item.is-hide .item__arr { display: block; }
+.item.item_deadlin { color: #444444; }
+.item.item_deadlin a { text-decoration: underline; }
+.item.item_deadlin a:hover { text-decoration: none; }
+.item.item_deadlin .field { line-height: 1.2; }
 .item .item__wrap { margin-top: 18px; padding: 0 18px 15px 10px; }
 .item .item__in { position: relative; padding-bottom: 9px; margin-bottom: 14px; border-bottom: 1px dotted #777777; }
 .item .item__in.item__in_mod { margin-bottom: 0; border-bottom: none; }
 .item .item__in.item__in_bot { margin-bottom: 0; padding-bottom: 0; }
+.item .item__in.item__in_mb { margin-bottom: 0px; }
+.item .item__in.item__in_wrap { margin-bottom: 5px; }
+.item .item__in.item__in_wrap .item__wrap { margin-top: 0; }
+.item .item__in.item__in_wrap .title { padding-left: 3px; }
 .item .item__arr { position: absolute; top: 2px; left: 50%; margin-left: -20px; width: 0px; height: 0px; border-style: solid; border-width: 5px 4.5px 0 4.5px; border-color: #ea5100 transparent transparent transparent; -moz-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); display: none; }
 .item .item__arr:before, .item .item__arr:after { position: absolute; content: ""; top: -5px; width: 0px; height: 0px; border-style: solid; border-width: 5px 4.5px 0 4.5px; border-color: #ea5100 transparent transparent transparent; }
 .item .item__arr:before { left: -21px; }
@@ -68,6 +76,8 @@ body a:hover { text-decoration: underline; }
 
 .topic { padding: 7px 0 0 2px; color: #777777; font-size: 18px; border-bottom: 1px dotted #777777; font-family: "GillSans-Light", Arial, sans-serif; font-weight: normal; *zoom: 1; }
 .topic:after { content: " "; display: table; clear: both; }
+.topic a { float: right; margin-top: 7px; font-weight: bold; color: #ff6600; font-size: 12px; text-shadow: 0 0 0 #ff6600; text-transform: uppercase; text-decoration: underline; }
+.topic a:hover { text-decoration: none; }
 .topic .filter { float: left; }
 .topic .status { margin-top: 5px; float: right; }
 
@@ -302,6 +312,20 @@ a.title { display: block; }
 .ban.ban_dark { background: #999999; }
 .ban .ban__row { margin: 32px 0 15px; font-size: 18px; text-transform: uppercase; line-height: 1.1; color: #777777; display: block; font-family: "GillSans-Light", Arial, sans-serif; font-weight: normal; }
 
+.calendar { margin: 6px 0 0 4px; }
+.calendar .day { position: relative; margin-left: 6px; height: 21px; width: 30px; line-height: 22px; vertical-align: top; text-align: center; cursor: pointer; -moz-border-radius: 21px; -webkit-border-radius: 21px; border-radius: 21px; display: inline-block; }
+.calendar .day:before { position: absolute; content: ""; top: 0; bottom: 0; left: -17px; right: 22px; background: #cce0cc; display: none; }
+.calendar .day:first-child { margin-left: 0; }
+.calendar .day:hover { text-decoration: underline; }
+.calendar .day.is-selected { background: #cce0cc; }
+.calendar .day.is-selected, .calendar .day.is-weekend { cursor: text; }
+.calendar .day.is-selected:hover, .calendar .day.is-weekend:hover { text-decoration: none; }
+.calendar .is-selected + .is-selected:before { display: block; }
+.calendar .is-weekend { color: #ff6600; }
+.calendar .row { margin-top: 10px; }
+.calendar a { color: #ff6600; text-transform: uppercase; text-decoration: underline; }
+.calendar a:hover { text-decoration: none; }
+
 .full-right { float: right; }
 
 .is-orange { color: #ff6600; }
@@ -320,6 +344,10 @@ a.title { display: block; }
 
 .is-right { text-align: right; }
 .is-right .label { text-align: left; }
+
+.mt6 { margin-top: 6px; }
+
+.mt20 { margin-top: 20px; }
 
 .mt38 { margin-top: 38px; }
 
@@ -374,7 +402,7 @@ a.title { display: block; }
 .l .l-col1 .wrap { position: absolute; top: 0; left: 0; right: 0; bottom: 4px; padding: 7px 28px 15px 7px; overflow: hidden; }
 .l .l-col1 .search { float: right; width: 149px; }
 .l .l-col1 .l-footer { left: 15px; right: 27px; padding: 4px 4px 15px; }
-.l .l-col2 { position: relative; float: right; padding: 7px 7px 60px; width: 716px; height: 100%; -moz-border-radius: 4px 0 0 4px; -webkit-border-radius: 4px; border-radius: 4px 0 0 4px; background-color: white; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.l .l-col2 { position: relative; float: right; padding: 7px 7px 60px; width: 716px; height: auto; min-height: 100%; -moz-border-radius: 4px 0 0 4px; -webkit-border-radius: 4px; border-radius: 4px 0 0 4px; background-color: white; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .l .l-col2 .search { float: left; width: 235px; }
 .l .l-col2 .l-footer { padding: 4px 7px 15px; left: 9px; right: 9px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .l .l-footer { position: absolute; bottom: 0; height: 38px; color: #777777; font-size: 18px; border-top: 1px solid #999999; font-family: "GillSans-Light", Arial, sans-serif; font-weight: normal; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }

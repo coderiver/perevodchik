@@ -35,7 +35,6 @@ head.ready(function() {
 		}
 		
 	});
-
 	$("body").on("click",".js-select-list li",function() {
 		var val = $(this).attr("data-val");
 		var text = $(this).text();
@@ -53,10 +52,10 @@ head.ready(function() {
 
 	// height
 	function wHeight() {
-		if ($(window).height() > ($('.js-col2').height() + 97)) {
-			$('.js-out').addClass('is-full');
-		} else {
+		if (($(window).height()) < ($('.js-col2').height() + 97)) {
 			$('.js-out').removeClass('is-full');
+		} else {
+			$('.js-out').addClass('is-full');
 		}
 	} wHeight();
 
