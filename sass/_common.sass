@@ -196,6 +196,8 @@ body
 	.item__wrap
 		margin-top: 18px
 		padding: 0 18px 15px 10px
+		&.mt10
+			margin-top: 10px
 	.item__in
 		position: relative
 		padding-bottom: 9px
@@ -631,6 +633,11 @@ body
 	height: 51px
 	&.textarea_h92
 		height: 92px
+	&.textarea_dark
+		color: #fff
+		border-color: #999
+		background: #999
+		display: block
 
 // checkbox
 .checkbox
@@ -746,6 +753,8 @@ a.title
 // field
 .field
 	margin: 14px 0 6px
+	.topic
+		line-height: 1.4
 
 // col
 .col
@@ -1150,8 +1159,8 @@ a.title
 		&:hover
 			text-decoration: none
 	
-// full-right
-.full-right
+// pull-right
+.pull-right
 	float: right
 
 // modifiers
@@ -1182,15 +1191,26 @@ a.title
 	.label
 		text-align: left
 
+.is-nowrap
+	white-space: nowrap
+
 // margin
+.mt-6
+	margin-top: -6px
+.mt0
+	margin-top: 0
 .mt6
 	margin-top: 6px
+.mt10
+	margin-top: 10px
 .mt20
 	margin-top: 20px
 .mt38
 	margin-top: 38px
 .mb10
 	margin-bottom: 10px
+.ml100
+	margin-left: 100px
 
 // width
 .w49
@@ -1225,6 +1245,8 @@ a.title
 	width: 347px
 .w569
 	width: 569px
+.w628
+	width: 628px
 .w50p
 	width: 49%
 

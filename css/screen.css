@@ -62,6 +62,7 @@ body a:hover { text-decoration: underline; }
 .item.item_deadlin a:hover { text-decoration: none; }
 .item.item_deadlin .field { line-height: 1.2; }
 .item .item__wrap { margin-top: 18px; padding: 0 18px 15px 10px; }
+.item .item__wrap.mt10 { margin-top: 10px; }
 .item .item__in { position: relative; padding-bottom: 9px; margin-bottom: 14px; border-bottom: 1px dotted #777777; }
 .item .item__in.item__in_mod { margin-bottom: 0; border-bottom: none; }
 .item .item__in.item__in_bot { margin-bottom: 0; padding-bottom: 0; }
@@ -178,6 +179,7 @@ body a:hover { text-decoration: underline; }
 
 .textarea { padding-top: 3px; resize: none; height: 51px; }
 .textarea.textarea_h92 { height: 92px; }
+.textarea.textarea_dark { color: white; border-color: #999999; background: #999999; display: block; }
 
 .checkbox { position: relative; display: block; cursor: pointer; -moz-user-select: -moz-none; -ms-user-select: none; -webkit-user-select: none; user-select: none; }
 .checkbox.is-uppercase { margin-top: 16px; }
@@ -212,6 +214,7 @@ a.title { display: block; }
 .row span { line-height: 22px; }
 
 .field { margin: 14px 0 6px; }
+.field .topic { line-height: 1.4; }
 
 .col { margin-left: 10px; vertical-align: top; display: inline-block; }
 .col:first-child { margin-left: 0; }
@@ -326,7 +329,7 @@ a.title { display: block; }
 .calendar a { color: #ff6600; text-transform: uppercase; text-decoration: underline; }
 .calendar a:hover { text-decoration: none; }
 
-.full-right { float: right; }
+.pull-right { float: right; }
 
 .is-orange { color: #ff6600; }
 
@@ -345,13 +348,23 @@ a.title { display: block; }
 .is-right { text-align: right; }
 .is-right .label { text-align: left; }
 
+.is-nowrap { white-space: nowrap; }
+
+.mt-6 { margin-top: -6px; }
+
+.mt0 { margin-top: 0; }
+
 .mt6 { margin-top: 6px; }
+
+.mt10 { margin-top: 10px; }
 
 .mt20 { margin-top: 20px; }
 
 .mt38 { margin-top: 38px; }
 
 .mb10 { margin-bottom: 10px; }
+
+.ml100 { margin-left: 100px; }
 
 .w49 { width: 49px; }
 
@@ -384,6 +397,8 @@ a.title { display: block; }
 .w347 { width: 347px; }
 
 .w569 { width: 569px; }
+
+.w628 { width: 628px; }
 
 .w50p { width: 49%; }
 
