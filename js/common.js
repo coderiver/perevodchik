@@ -59,8 +59,24 @@ head.ready(function() {
 		}
 	} wHeight();
 
+	//scroll for table
 	$(".js-scroll").mCustomScrollbar({
 		scrollInertia: 300
 	});
+
+	function listScroll(){
+
+		var height = $('.js-col2').height();
+		var table = $('.js-scroll .table').height() + 10;
+
+		if(table < height){
+			$('.js-scroll').css({'height': table});
+		} else{
+			$('.js-scroll').css({'height': height});
+		}
+
+		console.log(height, table)
+
+	} listScroll();
 
 });
