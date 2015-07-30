@@ -1263,16 +1263,26 @@ a.title
 
 
 //overflow scroll
+.overflow-wrap
+	.table
+		width: calc(100% - 5px)
+
 .overflow
 	position: relative
 	max-height: 700px
 	overflow-y: auto
+
+.js-scroll
+	.mCSB_inside > .mCSB_container
+		margin-right: 5px
+	.mCSB_scrollTools
+		width: 2px
 
 .thead
 	position: absolute
 	top: 0
 	left: 0
 	right: 0
-	padding-right: 30px
+	padding-right: 5px
 	background: #fff
 	z-index: 5

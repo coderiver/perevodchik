@@ -410,9 +410,14 @@ a.title { display: block; }
 
 .pl35 { padding-left: 35px; }
 
+.overflow-wrap .table { width: calc(100% - 5px); }
+
 .overflow { position: relative; max-height: 700px; overflow-y: auto; }
 
-.thead { position: absolute; top: 0; left: 0; right: 0; padding-right: 30px; background: white; z-index: 5; }
+.js-scroll .mCSB_inside > .mCSB_container { margin-right: 5px; }
+.js-scroll .mCSB_scrollTools { width: 2px; }
+
+.thead { position: absolute; top: 0; left: 0; right: 0; padding-right: 5px; background: white; z-index: 5; }
 
 .l { position: relative; margin-top: -97px; padding-top: 97px; height: 100%; z-index: 1; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
