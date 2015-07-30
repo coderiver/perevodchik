@@ -431,6 +431,7 @@ body
 
 // table
 .table
+	position: relative
 	margin-top: 2px
 	color: $gray
 	table-layout: fixed
@@ -1263,5 +1264,15 @@ a.title
 
 //overflow scroll
 .overflow
+	position: relative
 	max-height: 700px
 	overflow-y: auto
+
+.thead
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	padding-right: 30px
+	background: #fff
+	z-index: 5
