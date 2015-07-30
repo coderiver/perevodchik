@@ -33,7 +33,7 @@ head.ready(function() {
 			$(".js-select-list").slideUp(100);
 			select.toggleClass("is-active").find(".js-select-list").slideToggle(100);
 		}
-		
+
 	});
 	$("body").on("click",".js-select-list li",function() {
 		var val = $(this).attr("data-val");
@@ -58,5 +58,9 @@ head.ready(function() {
 			$('.js-out').addClass('is-full');
 		}
 	} wHeight();
+
+	$(".js-scroll").mCustomScrollbar({
+		scrollInertia: 300
+	});
 
 });
