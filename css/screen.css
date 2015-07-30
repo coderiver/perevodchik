@@ -412,7 +412,7 @@ a.title { display: block; }
 
 .overflow-wrap .table { width: calc(100% - 5px); }
 
-.overflow { position: relative; max-height: 700px; overflow-y: auto; }
+.overflow { position: relative; max-height: 355px; overflow-y: auto; }
 
 .js-scroll .mCSB_inside > .mCSB_container { margin-right: 5px; }
 .js-scroll .mCSB_scrollTools { width: 2px; }
